@@ -1,5 +1,5 @@
-Installing Energia IDE
-======================
+Installing Energia IDE for CC3200 LaunchPad
+===========================================
 We will use Energia IDE to program the CC3200 LaunchPad device. The homepage for Energia IDE is hosted at https://energia.nu/. Instructions on downloading the software and its drivers are given on https://energia.nu/download/. The following instructions are for Windows users. If you use Mac OS or Linux please follow instructions for such on https://energia.nu/download/
 
 Software
