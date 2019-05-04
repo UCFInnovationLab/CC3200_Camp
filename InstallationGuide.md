@@ -28,7 +28,7 @@ Downloading the program to your CC3200 device
 1) Browse to https://github.com/UCFInnovationLab/CC3200_Camp
 2) Click on **Clone or download** button and then click **Download ZIP**
 3) Unzip the contents of the downloaded file to a folder
-4) From the Energia IDE click **Open** in the **File** dropdown menu: 
+4) From the Energia IDE click **Open** in the **File** dropdown menu:  
 **File > Open**
 5) Browse to folder where you unzipped the file and select file **LaunchPad3200WiFiPost.ino** in the **LaunchPad3200WiFiPost** subfolder
 6) Click on **Board** in the **Tools** dropdown menu and choose **CC3200-LAUNCHXL (80 MHz)**:  
