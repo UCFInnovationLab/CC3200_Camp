@@ -33,4 +33,4 @@ Downloading the program to your CC3200 device
 8) Click on 'Port' in the 'Tools' dropdown menu and select the 'COM_' port that your device is attached to: Tools > Port
 9) Click on Serial Monitor in 'Tools' dropdown menu to open a new window: Tools > Serial Monitor
 10) Download the program onto the CC3200 board by clicking 'Upload' in the 'Sketch' dropdown menu: Sketch > Upload
-11) You should be able to see your board communicating with your CC3200 device through the 'Serial Monitor' window that you just opened up
+11) You should be able to see your board communicating with your computer through the 'Serial Monitor' window that you just opened up
