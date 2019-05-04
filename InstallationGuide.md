@@ -28,9 +28,9 @@ Downloading the program to your CC3200 device
 3) Unzip the contents of the downloaded file to a folder
 4) From the Energia IDE click **Open** in the **File** dropdown menu: **File > Open**
 5) Browse to folder where you unzipped the file and select file **LaunchPad3200WiFiPost.ino** in the **LaunchPad3200WiFiPost** subfolder
-6) Click on **Board** in the **Tools** dropdown menu and choose **CC3200-LAUNCHXL (80 MHz)**: **Tools > Board**
+6) Click on **Board** in the **Tools** dropdown menu and choose **CC3200-LAUNCHXL (80 MHz)**: **Tools > Board > CC3200-LAUNCHXL (80 MHz)**
 7) Plug in your board into your USB port
-8) Click on **Port** in the **Tools** dropdown menu and select the **COM_** port that your device is attached to: **Tools > Port**
+8) Click on **Port** in the **Tools** dropdown menu and select the **COM_** port that your device is attached to: **Tools > Port > COM_**
 9) Click on **Serial Monitor** in **Tools** dropdown menu to open a new window: **Tools > Serial Monitor**
 10) Download the program onto the CC3200 board by clicking **Upload** in the **Sketch** dropdown menu: **Sketch > Upload**
 11) You should be able to see your board communicating with your computer through the **Serial Monitor** window that you just opened up
