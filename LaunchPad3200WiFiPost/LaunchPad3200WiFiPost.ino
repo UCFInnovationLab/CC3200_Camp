@@ -8,16 +8,20 @@
 
 #include "M2XStreamClient.h"
 
-char ssid[] = "UCF_DEMO"; //  your network SSID (name)
-char pass[] = "UCF_UCF_IOT";    // your network password (use for WPA, or use as key for WEP)
+char ssid[] = "dd-wrt"; //  your network SSID (name)
+char pass[] = "BlackRabbit94";    // your network password (use for WPA, or use as key for WEP)
 //int keyIndex = 0;            // your network key Index number (needed only for WEP)
 
 int status = WL_IDLE_STATUS;
 
-char deviceId[] = "8d4011b4b7b1acea472e7489b3b163e3"; // Device you want to push to
-char streamName_t[] = "mary_t"; // Stream you want to push temperature to
-char streamName_a[] = "mary_a"; // Stream you want to push accleration_z to
-char m2xKey[] = "31b158f2c5a9779e6b149bc076a75c48"; // Your M2X access key
+char streamName_t[] = "Name1_t"; // Stream you want to push temperature to
+char streamName_a[] = "Name1_a"; // Stream you want to push accleration_z to
+
+char deviceId_t[] = "8d4011b4b7b1acea472e7489b3b163e3"; // Device you want to push to
+char deviceId_a[] = "20aed9816b16a127adf6db0bee9e4749"; // Device you want to push to
+
+//char m2xKey[] = "31b158f2c5a9779e6b149bc076a75c48"; // Your M2X access key
+char m2xKey[] = "242302ebabc7ead432d3fdac5d0e0ce7"; // Your M2X access key
 
   char fromTime[] = "2018-01-01T01:01:01.001Z"; // yyyy-mm-ddTHH:MM:SS.SSSZ
   char endTime[] = "2020-05-20T01:01:01.001Z"; // yyyy-mm-ddTHH:MM:SS.SSSZ
@@ -119,10 +123,12 @@ void loop() {
   digitalWrite(RED_LED, LOW);    // turn the LED off by making the voltage LOW
   
   float objt = tmp006.readObjTempC();
+  if (objt > 50.0) objt = 50.0;
+  if (objt < 0.0) objt = 0.0;
   Serial.print("Object Temperature: "); Serial.print(objt); Serial.println("*C");
 
   
-  int response = m2xClient.updateStreamValue(deviceId, streamName_t, objt);
+  int response = m2xClient.updateStreamValue(deviceId_t, streamName_t, objt);
   Serial.print("M2x client response code: ");
   Serial.println(response);
 
@@ -130,7 +136,7 @@ void loop() {
     while (1)
     ;
 
-  response = m2xClient.updateStreamValue(deviceId, streamName_a, hi_a);
+  response = m2xClient.updateStreamValue(deviceId_a, streamName_a, hi_a);
   Serial.print("M2x client response code: ");
   Serial.println(response);
 
@@ -157,7 +163,7 @@ void delete_readings() {
 
   Serial.println("Deleting temperature values from Server");
   // Delete values
-  int response = m2xClient.deleteValues(deviceId, 
+  int response = m2xClient.deleteValues(deviceId_t, 
                                         streamName_t,
                                         fromTime,
                                         endTime);
@@ -166,7 +172,7 @@ void delete_readings() {
 
     Serial.println("Deleting Acceleration values from Server");
   // Delete values
-  response = m2xClient.deleteValues(deviceId, 
+  response = m2xClient.deleteValues(deviceId_a, 
                                         streamName_a,
                                         fromTime,
                                         endTime);
