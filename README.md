@@ -1,6 +1,6 @@
 # UCF Innovation Lab CC3200 Camp
 In this camp, you will learn how to program a **CC3200 LaunchPad** to connect to a local wireless access point and upload data to the web. The CC3200 is a chip made by Texas Instruments that supports wireless connectivity. A popular term for devices made with these chips is an **Internet of Things (IoT)**.
-----------------------
+
 **The basic steps to accomplish this lab are listed below:**
 1. Unpack and set up CC3200 LaunchPad
 1. Install Energia IDE (Compiler) for the CC3200 LaunchPad
@@ -8,32 +8,24 @@ In this camp, you will learn how to program a **CC3200 LaunchPad** to connect to
 1. Program the CC3200 LaunchPad with the downloaded software
 1. Modify software to include your home SSID and credentials 
 
+## Unpack and Set Up CC3200 LaunchPad
 
 
 ## Installing Energia IDE for CC3200 LaunchPad
 
-We will use **Energia IDE** to program the **CC3200 LaunchPad** device. The homepage for Energia IDE is hosted at https://energia.nu/. Instructions on downloading the software and its drivers are given on https://energia.nu/download/. The following instructions are for **Windows** users. If you use **Mac OS or Linux** please follow instructions for such on https://energia.nu/download/
+We will use **Energia IDE** to program the **CC3200 LaunchPad** device. The homepage for Energia IDE is hosted at https://energia.nu/. Instructions on downloading the software and its drivers are given on https://energia.nu/download/. 
+**Please follow the instructions given at that website and read the notes below.**
+First, download Energia 1.8.7E21 (10/17/2018) from the website above based on which operating system you use.
+Then, click on the link for the instaliation guide for CC3200 based on your operating system. 
+* make sure to **follow the instructions on this page for important jumper settings and firmware upgrade instructions.**
+Follow steps 1-6, making sure to download all the software. 
+* To connect your CC3200 to your computer (step 6), use the cord provided in the box.
 
-Energia IDE Software
-----------------------
-1) Download **Windows Binary release version** for Energia from https://energia.nu/download/
-2) Unzip the contents of the downloaded file to a folder
-3) Click on the Energia icon in the unzipped folder to run the Energia IDE
-
-Drivers
--------
-4) Download the **CC3200 LaunchPad driver** from http://energia.nu/guide/install/windows/
-5) Unzip the contents of the downloaded file to a folder
-6) Run the **Energia Drivers for Windows** file to install the drivers 
-
-Setup Configuration for CC3200
----------------------------------------
-7) In the Energia IDE select **Boards Manager** from the **Tools** dropdown menu:<br/>
-**Tools > Board > Boards Manager**
-8) Find **CC3200 boards** and click on install
-9) In the Energia IDE select **Manage Libraries** from the **Sketch** dropdown menu:<br/>
-**Sketch > Include Library > Manage Libraries**
-10) Find **M2XStreamClient** and install **version 2.2.0**
+**Next, follow these steps to configure Energia IDE for your board.**
+* In the Energia IDE select Boards Manager from the Tools dropdown menu: Tools > Board > Boards Manager
+* Find CC3200 boards and click on install (make sure you select "Energia CC3200 boards by Energia"
+* In the Energia IDE select Manage Libraries from the Sketch dropdown menu: Sketch > Include Library > Manage Libraries
+* Find M2XStreamClient and install version 2.2.0
 
 Downloading the program to your CC3200 device
 =============================================
@@ -53,6 +45,22 @@ Downloading the program to your CC3200 device
 10) Download the program onto the CC3200 board by clicking **Upload** in the **Sketch** dropdown menu:<br/>
 **Sketch > Upload**
 11) You should be able to see your board communicating with your computer through the **Serial Monitor** window that you just opened up
+
+# Customize Board for Your Access Point
+
+In this section, you will configure the board to connect to your home access point. You will need the SSID and Password of your access point. This information will be inserted into the program.
+
+Network Configuration
+---------------------
+
+If you are using a Wi-Fi BosoterPack or LaunchPad, the following variables need configuration:
+
+```
+char ssid[] = "<ssid>";
+char pass[] = "<WPA password>";
+```
+
+Just fill in the SSID and password of the Wi-Fi hotspot, you should be good to go.
 
 
 
