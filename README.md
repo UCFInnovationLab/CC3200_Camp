@@ -1,7 +1,7 @@
 # UCF Innovation Lab CC3200 Camp
 In this camp, you will learn how to program a **CC3200 LaunchPad** to connect to a local wireless access point and upload data to the web. The CC3200 is a chip made by Texas Instruments that supports wireless connectivity. A popular term for devices made with these chips is an **Internet of Things (IoT)**.
-
-The basic steps to accomplish this lab are listed below:
+----------------------
+**The basic steps to accomplish this lab are listed below:**
 1. Unpack and set up CC3200 LaunchPad
 1. Install Energia IDE (Compiler) for the CC3200 LaunchPad
 1. Download software from UCF Innovation Lab GitHub Repository
